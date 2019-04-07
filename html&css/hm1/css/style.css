@@ -1,0 +1,68 @@
+body {
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+}
+.container {
+	margin: 0 auto;
+	width: 1280px;
+	text-align: center;
+}
+/*Navigation */
+.navigation {
+	padding: 30px 0;
+}
+.navigation-link {
+	margin-right: 70px;
+	color: #16a085;
+	font-size: 18px;
+	letter-spacing: 2.7px;	
+	text-transform: uppercase;
+	text-decoration: none;
+}
+/*content section*/
+.content
+{
+	padding: 50px 0;
+	background-color: #f5f6f7;
+}
+/*content title*/
+.content-topic {
+	font-size: 22px;
+	letter-spacing: 3.3px;
+	text-transform: uppercase;
+}
+/*content text*/
+.content-description-block {
+	padding: 30px 15px;
+}
+.content-text {
+	margin: 0 80px;
+	color: #373737;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 2.4px;
+	white-space: pre-line;
+}
+
+/*content button*/
+.btn {
+	width: 200px;
+	height: 50px;
+	background-color: #16a085;
+	border-width: 0;
+	border-radius: 4px;
+
+}
+.btn-text {
+	text-transform: uppercase;
+	color: #ffffff;
+	font-size: 12px;
+	letter-spacing: 1.8px;
+}
+/*footer part*/
+.footer-copyright {
+	text-align: right;
+	padding: 35px 104px;
+	font-size: 16px;
+	letter-spacing: 2.4px;
+}

@@ -1,0 +1,168 @@
+body {
+    font-family: Verdana, sans-serif;
+    color: #fff;
+    background: url('../images/background.png') no-repeat;
+    background-size: cover;
+}
+
+/* все ссылки изначально не подчеркнуты и имеют белый цвет */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1366px;
+    margin: 0 auto;
+}
+/* content container */
+.container{
+    width: 1065px;
+    margin: 0 auto;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.header {
+    padding: 50px 0;
+}
+/* logo-title block */
+.logo {
+    float: left;
+    width: 170px;
+}
+
+.logo-link {  /* logo link text *.
+    /*color: #fff;*/
+    /*text-decoration: none;*/
+}
+/* блок для лого-картинки с высотой и шириной,
+чтобы сделать блоку background-image с возможнстью далее заменить
+background-image при навидении */
+.logo-image {
+    float: left;
+    width: 46px;
+    height: 44px;
+    background-image: url("../images/logo-orange.png");
+}
+.logo-title {
+    margin-left: 15px;
+    font-weight: 700;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+.logo-title-first {
+    font-size: 29px;
+}
+.logo-title-second {
+    font-size: 18px;
+}
+.logo-link:hover {
+    color: #f26522;
+}
+/* change logo to orange */
+.logo-link:hover .logo-image {
+    background-image: url("../images/logo.png");
+}
+/* header contacts */
+.contacts {
+    float: right;
+    margin-top: 5px;
+}
+.contacts-text {
+    display: block;
+    line-height: 23px;
+    text-align: right;
+}
+
+/* shopping card */
+/*для каждой блок-карточки делаем отступ вниз и вправо */
+.shopping-card {
+    margin-right: 63px;
+    margin-bottom: 60px;
+}
+
+/*класс для позиции каждой карточки*/
+.card-float-position {
+    float: left;
+}
+
+/*каждая третяя карточка должна иметь следующий класс для обнуления отступа справа */
+.last-card-margin {
+    margin-right: 0;
+}
+
+/* блок обьеденяет картинку и блок доп.информации */
+.card-image-block {
+    position: relative;
+    width: 313px;
+    height: 206px;
+    overflow: hidden;
+    background: linear-gradient(to top, #000, #fff); /* первый цвет внизу, второй вверху, движение снизу вверх */
+}
+
+/* когда наводим на блок-карточку меняем цвет имени карточки */
+.shopping-card:hover .card-title {
+    color: #f26522;
+}
+/*класс для картинки*/
+.card-image {
+    padding: 3px;  /* отступ рисунка для background-color */
+}
+/* view details block */
+/* блок дополнительной информации, который будет выезжать снизу вверх,
+когда мы будем наводиь на блок с карточкой*/
+.card-view-details {
+    position: absolute;
+    width: 313px;
+    height: 70px;
+    background-color: #f26522;
+    transition: 0.7s;
+}
+
+.group-details {
+    padding: 10px 20px;
+    line-height: 21px;
+}
+/* когда наводим на блок-карточку, появляется блок доп. информации*/
+.shopping-card:hover .card-view-details {
+    transform: translateY(-70px);
+}
+.card-view-details-text {
+    display: block;        /*span из строчного в блочный для переноса на след. строку.*/
+    font-size: 10px;
+}
+/*!!! псевдоэлемент  перед числом в блоке доп.информации*/
+.card-view-details-price::before {
+    content: '€';
+}
+.card-view-details-link {
+    float: right;
+    line-height: 30px;
+    font-size: 14px;
+}
+/* символ ">" после "View Details" с небольшим отсупом */
+.card-view-details-link::after {
+    margin-left: 15px;
+    opacity: 0.5;
+    content: '>';
+}
+
+/* название которое находится под блоком-карточки */
+.card-title {
+    display: block;
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+/* footer */
+.footer {
+    padding-bottom: 20px;
+}
+.copyright {
+    font-size: 12px;
+    text-align: center;
+}

@@ -1,0 +1,275 @@
+body {
+    font-family: Verdana, sans-serif;
+    background-image: url("../images/rana-sawalha-364253-unsplash.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.container {
+    margin: 0 auto;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.header {
+    padding: 20px 50px 20px 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/*расположение текста логотипа в левой части хедера*/
+.logo-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: default;
+    transition: color 0.5s linear;
+}
+.logo-title:hover {
+    color: #3aa86e;
+}
+
+/* текст с правой стороны после иконок */
+.header-text {
+    float: right;
+    line-height: 21px;
+    font-size: 14px;
+    word-spacing: 2px;
+}
+/* основной стиль для ссылок */
+.link-color {
+    text-decoration: none;
+    color: #3cb878;
+}
+.link-color:hover {
+    text-decoration: underline;
+}
+
+/* список для иконок , сдвигаем в правую сторону,
+ и делаем отступ справа 40px от текста */
+.header-icons-list {
+    float: right;
+    margin-right: 40px;
+}
+/* распологаем список с иконками в один ряд,
+каждый элемент списка иммет отступ селва-справа по 15px*/
+.header-icons-item {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* спрайт со всеми иконками*/
+.sprite {
+    background-image: url(../images/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+.sprite-ic_calendar {
+    width: 19px;
+    height: 19px;
+    background-position: -5px -5px;
+}
+
+.sprite-ic_forum {
+    width: 28px;
+    height: 20px;
+    background-position: -5px -34px;
+}
+
+.sprite-ic_journey {
+    width: 20px;
+    height: 20px;
+    background-position: -81px -5px;
+}
+/* при навидении заменяем на иконку другого цвета*/
+.header-icons-item:hover .sprite-ic_calendar {
+    background-position: -34px -5px;
+}
+.header-icons-item:hover .sprite-ic_forum {
+    background-position: -43px -34px;
+}
+.header-icons-item:hover .sprite-ic_journey {
+    background-position: -81px -35px;
+}
+
+.content {
+    margin: 65px 0;
+}
+/* форма регистрации с фиксированой шириной */
+.registration-form {
+    width: 450px;
+    border-radius: 15px;
+    background: #fff;
+}
+/* зеленый квадрат в верхней части формы,
+задаем position:absolute для отображения в левом верхнем крае нашей формы,
+задаем отступ от формы отталкиваясь сверху вниз на 30px,
+высота и ширина фиксированная */
+.green-square {
+    position: absolute;
+    margin-top: 30px;
+    width: 18px;
+    height: 18px;
+    background-color: #3cb878;
+}
+/* контейнер для элементов внутри формы
+margin - выравниваем по горизонтали
+padding - делаем внутренний отступ от формы, сверху и снизу*/
+.form-container {
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 322px;
+    color: #434343;
+}
+/* блок верхней части формы в которую входит "Sign up",
+"Log in", две социальные кнопки(facebook,google plus)
+и элемент с двумя линия под кнопками*/
+.form-top-part {
+    margin-bottom: 20px;
+}
+
+.form-signup {
+    font-size: 20px;
+}
+.form-login {
+    font-size: 14px;
+    margin-left: 190px;
+}
+
+/* класс(наименования кнопки) отступ слева после псевдоэлемента  */
+.button-title {
+    margin-left: 10px;
+}
+/* основные параметр двух кнопок
+margin - внешний отступ сверху от текста
+padding - отступ внутри кнопки*/
+.social-buttons {
+    width: 158px;
+    margin-top: 15px;
+    padding: 13px 0;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+}
+/*задний фон кнопок и фон после наводки */
+.fb-button-color {
+    background-color: #305db8;
+}
+.gplus-button-color {
+    background-color: #df4a32;
+}
+.fb-button-color:hover {
+    background-color: #264b96;
+}
+.gplus-button-color:hover {
+    background-color: #c3412c;
+}
+/* псевдоэлемент после иконки в виде бордера */
+.fab::after {
+    content: '';
+    margin-left: 15px;
+    border-right: 1px solid #000;
+    opacity: 0.2;
+}
+
+/* слово "or" после социальных кнопок
+с двух сторон от "or" расположены псевдоэлементы */
+.word-between-lines {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    color: #848484;
+}
+/* основные параметры для двух линий */
+.pseudo-lines::before, .pseudo-lines::after {
+    content: '';
+    display: inline-block;
+    margin-bottom: 3px;
+    width: 135px;
+    border-top: 1px solid #848484;;
+    opacity: 0.2;
+}
+/* отступ справа от "or" для левой линии */
+.pseudo-lines::before {
+    margin-right: 15px;
+}
+/* отступ слева от "or" для правой линии */
+.pseudo-lines::after {
+    margin-left: 15px;
+}
+
+/* ширина поля ввода, отсуп вниз между полями(margin) ,
+внутренние отступы в поле(padding), закругляем рамку(border-radius) */
+.form-input {
+    width: 310px;
+    margin-bottom: 15px;
+    padding: 20px 0 20px 15px;
+    border-radius: 5px;
+    border: 1px solid #eaeaea;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+/* когда выбираем определенное поле ввода, убираем рамки
+делая их прозрачными и накладываем тень*/
+.form-input:focus {
+    border: 1px solid transparent;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.21);
+}
+/*чекбокс*/
+.control {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    color: #656565;
+}
+.control input {
+    display: none;
+}
+.control_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0,0 ,0.1);
+}
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control input:checked ~ .control_indicator:after {
+    display: block;
+}
+.control-checkbox .control_indicator:after {
+    left: 7px;
+    top: 4px;
+    width: 4px;
+    height: 8px;
+    border: solid #41ba7b;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.create-account {
+    width: 322px;
+    margin-top: 20px;
+    padding: 17px 0;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #3cb878;
+}
+.create-account:hover {
+    background-color: #329a65;
+}
+.btn-transition {
+    transition: 1s;
+}
